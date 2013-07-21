@@ -28,17 +28,18 @@ body {
 .navigation {
   
   /* Collapsed */
-  width: 0; 
+  width: 15%; 
 
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
+  background-color: #000000;
 }
 
 .page-wrap {
-  width: 100%;
+  width: 85%;
   float: right;
 }
 
@@ -56,6 +57,10 @@ body {
 
 #main-nav:target + .page-wrap {
   width: 80%;
+}
+
+img.navcloud {
+	width: 100%;
 }
 
 p {
@@ -91,8 +96,4 @@ h4 {
 ul {
 	list-style-type: none;
 	padding:0;
-}
-
-img.navcloud {
-	width: 200px;
 }

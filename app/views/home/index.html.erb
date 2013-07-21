@@ -24,7 +24,13 @@
 
 <!-- I am collapsed by default -->
 <nav id="main-navigation" class="navigation">
-   <a href="#">Nav Links</a>
+
+<h4 style="color:white;">All Clouds</h4>
+
+<ul id="cloudthumbs">
+    
+</ul>
+  
    <!-- more -->
 </nav>
 
@@ -44,6 +50,9 @@ var currentIndex = 0;
 $.getJSON('/clouds.json', function (data) {
 	clouds = data;
 	loadCloud(currentIndex);
+	for (i in clouds) {
+		$('#cloudthumbs').append("<li data-index=" + i + "><img class='navcloud' src='/assets/"+ clouds[i].name + "-thumb.png'></li>");
+	}
 });
 	
 function loadCloud(index) {
@@ -72,7 +81,12 @@ function goNext() {
 	loadCloud(currentIndex);
 }
 
+function goToCloud() {
+	console.log($(this));
+}
+
 $("#previous").click(goPrevious);	
 $("#next").click(goNext);
+$("#cloudthumbs li").click(goToCloud);
 
 </script>
