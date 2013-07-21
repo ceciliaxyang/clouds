@@ -1,0 +1,98 @@
+// Place all the styles related to the Clouds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+body {
+	background-color: transparent !important;
+}
+
+#cloudbg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: #000000;
+	background: no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.navigation {
+  
+  /* Collapsed */
+  width: 0; 
+
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.page-wrap {
+  width: 100%;
+  float: right;
+}
+
+#main-navigation:target {
+
+}
+
+.navigation {
+  transition: width 0.3s ease;
+}
+
+#main-nav:target {
+  width: 20%; 
+}
+
+#main-nav:target + .page-wrap {
+  width: 80%;
+}
+
+p {
+	font-family: 'Avenir', sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	color: #FFF;
+}
+
+h4 {
+	font-family: 'Karla', sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.lead {
+	font-family: 'Karla', sans-serif;
+	font-weight: bold;
+	font-size: 100px;
+	line-height: 40px;
+	color: #FFF;
+}
+
+.description {
+	font-family: 'Karla', sans-serif;
+	font-weight: regular;
+	font-size: 18px;
+	line-height: 21px;
+	color: #FFF;
+}
+
+ul {
+	list-style-type: none;
+	padding:0;
+}
+
+img.navcloud {
+	width: 200px;
+}

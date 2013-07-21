@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  genus: MyString
+  specie: MyString
+  accessory: MyString
+  thumbnail_path: MyString
+  image_path: MyString
+  photo_credit: MyString
+  level: MyString
+  precipitation: MyString
+  description: MyString
+
+two:
+  name: MyString
+  genus: MyString
+  specie: MyString
+  accessory: MyString
+  thumbnail_path: MyString
+  image_path: MyString
+  photo_credit: MyString
+  level: MyString
+  precipitation: MyString
+  description: MyString

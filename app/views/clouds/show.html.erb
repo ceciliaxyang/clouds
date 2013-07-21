@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p class="lead" align="center">
+	<%= @cloud.genus %>	
+</p>
+
+<p class="description" align="center">
+	<%= @cloud.description %>	
+</p>
+
+<p>	<%= [@cloud].to_json %></p>
+
+
+<%= link_to 'Edit', edit_cloud_path(@cloud) %> 
+
+<script>
+	
+
+	$('html').css("background-image","url(/assets/<%= @cloud.name %>.png)");
+</script>

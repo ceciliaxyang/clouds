@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clouds</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "effeckt.autoprefixed" %>
+
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "off-screen-nav" %>
+
+  <%= csrf_meta_tags %>
+
+  <link href='http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

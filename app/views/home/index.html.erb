@@ -1,0 +1,78 @@
+
+
+<!--
+<button class="off-screen-nav-button" data-effeckt="effeckt-off-screen-nav-left-push">Left Push</button>
+
+
+<nav class="effeckt-off-screen-nav effeckt-off-screen-nav-left-push effeckt-off-screen-nav-show" id="effeckt-off-screen-nav" style="display: block;">
+
+  <h4>
+    All Clouds
+    <a href="#0" id="effeckt-off-screen-nav-close" class="effeckt-off-screen-nav-close">×</a>
+  </h4>
+
+  <ul>
+    <li><a href="#0"><img class="navcloud" src="/assets/kauai-thumb.png"></a></li>
+    <li><a href="#0"><img class="navcloud" src="/assets/calistoga-thumb.png"></a></li>
+    <li><a href="#0"><img class="navcloud" src="/assets/kauai-thumb.png"></a></li>
+    <li><a href="#0"><img class="navcloud" src="/assets/calistoga-thumb.png"></a></li>
+  </ul>
+
+</nav>
+
+-->
+
+<!-- I am collapsed by default -->
+<nav id="main-navigation" class="navigation">
+   <a href="#">Nav Links</a>
+   <!-- more -->
+</nav>
+
+<!-- I am full width by default -->
+<div class="page-wrap">
+	<a href="#main-navigation">Menu</a>
+	<button id="previous">Previous</button>
+	<button id="next">Next</button>
+	<div id="cloudbg"></div>
+</div>
+
+
+<script>
+var clouds;
+var currentIndex = 0;
+
+$.getJSON('/clouds.json', function (data) {
+	clouds = data;
+	loadCloud(currentIndex);
+});
+	
+function loadCloud(index) {
+	cloudbg = $('#cloudbg');
+	cloudbg.fadeOut('slow', function() {
+		cloudbg.css("background-image","url(/assets/" + clouds[index].name + ".png)");
+		cloudbg.fadeIn('slow');
+	});
+}
+	
+function goPrevious() {
+	if (currentIndex==0) {
+		currentIndex=clouds.length-1;
+	} else {
+		currentIndex=currentIndex-1;
+	}
+	loadCloud(currentIndex);
+}
+
+function goNext() {
+	if (currentIndex==clouds.length-1) {
+		currentIndex=0;
+	} else {
+		currentIndex=currentIndex+1;
+	}
+	loadCloud(currentIndex);
+}
+
+$("#previous").click(goPrevious);	
+$("#next").click(goNext);
+
+</script>

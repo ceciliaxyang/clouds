@@ -1,0 +1,57 @@
+<%= form_for(@cloud) do |f| %>
+  <% if @cloud.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cloud.errors.count, "error") %> prohibited this cloud from being saved:</h2>
+
+      <ul>
+      <% @cloud.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :genus %><br />
+    <%= f.text_field :genus %>
+  </div>
+  <div class="field">
+    <%= f.label :specie %><br />
+    <%= f.text_field :specie %>
+  </div>
+  <div class="field">
+    <%= f.label :accessory %><br />
+    <%= f.text_field :accessory %>
+  </div>
+  <div class="field">
+    <%= f.label :thumbnail_path %><br />
+    <%= f.text_field :thumbnail_path %>
+  </div>
+  <div class="field">
+    <%= f.label :image_path %><br />
+    <%= f.text_field :image_path %>
+  </div>
+  <div class="field">
+    <%= f.label :photo_credit %><br />
+    <%= f.text_field :photo_credit %>
+  </div>
+  <div class="field">
+    <%= f.label :level %><br />
+    <%= f.text_field :level %>
+  </div>
+  <div class="field">
+    <%= f.label :precipitation %><br />
+    <%= f.text_field :precipitation %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

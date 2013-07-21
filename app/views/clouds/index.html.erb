@@ -1,0 +1,41 @@
+<h1>Listing clouds</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Genus</th>
+    <th>Specie</th>
+    <th>Accessory</th>
+    <th>Thumbnail path</th>
+    <th>Image path</th>
+    <th>Photo credit</th>
+    <th>Level</th>
+    <th>Precipitation</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clouds.each do |cloud| %>
+  <tr>
+    <td><%= cloud.name %></td>
+    <td><%= cloud.genus %></td>
+    <td><%= cloud.specie %></td>
+    <td><%= cloud.accessory %></td>
+    <td><%= cloud.thumbnail_path %></td>
+    <td><%= cloud.image_path %></td>
+    <td><%= cloud.photo_credit %></td>
+    <td><%= cloud.level %></td>
+    <td><%= cloud.precipitation %></td>
+    <td><%= cloud.description %></td>
+    <td><%= link_to 'Show', cloud %></td>
+    <td><%= link_to 'Edit', edit_cloud_path(cloud) %></td>
+    <td><%= link_to 'Destroy', cloud, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cloud', new_cloud_path %>
