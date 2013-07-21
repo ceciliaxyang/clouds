@@ -1,45 +1,22 @@
 
-
-<!--
-<button class="off-screen-nav-button" data-effeckt="effeckt-off-screen-nav-left-push">Left Push</button>
-
-
-<nav class="effeckt-off-screen-nav effeckt-off-screen-nav-left-push effeckt-off-screen-nav-show" id="effeckt-off-screen-nav" style="display: block;">
-
-  <h4>
-    All Clouds
-    <a href="#0" id="effeckt-off-screen-nav-close" class="effeckt-off-screen-nav-close">×</a>
-  </h4>
-
-  <ul>
-    <li><a href="#0"><img class="navcloud" src="/assets/kauai-thumb.png"></a></li>
-    <li><a href="#0"><img class="navcloud" src="/assets/calistoga-thumb.png"></a></li>
-    <li><a href="#0"><img class="navcloud" src="/assets/kauai-thumb.png"></a></li>
-    <li><a href="#0"><img class="navcloud" src="/assets/calistoga-thumb.png"></a></li>
-  </ul>
-
-</nav>
-
--->
-
 <!-- I am collapsed by default -->
-<nav id="main-navigation" class="navigation">
-
-<h4 style="color:white;">All Clouds</h4>
-
-<ul id="cloudthumbs">
-    
-</ul>
+<nav id="sidebar" class="sidebar">
+	<a href="#" class="close-sidebar">&#10005;</a>
+	<span class="nav-title">All Clouds</span>
+	<ul id="cloudthumbs"></ul>
   
    <!-- more -->
 </nav>
 
 <!-- I am full width by default -->
 <div class="page-wrap">
-	<a href="#main-navigation">Menu</a>
+	<div class="main-navigation" style="padding-top:5px;">
+		<a href="#sidebar" class="nav-title">Menu</a>
+	</div>
+	
 	<button id="previous">Previous</button>
 	<button id="next">Next</button>
-	<h1 id="cloudname">Cloud Name</h1>
+	<h1 id="cloudname" style="text-align:center; padding-top:50px;"></h1>
 	<div id="cloudbg"></div>
 </div>
 
