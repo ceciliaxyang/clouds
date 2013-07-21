@@ -70,6 +70,15 @@ p {
 	color: #FFF;
 }
 
+
+h1 {
+	font-family: 'Karla', sans-serif;
+	font-weight: bold;
+	font-size: 100px;
+	line-height: 40px;
+	color: #FFF;
+}
+
 h4 {
 	font-family: 'Karla', sans-serif;
 	font-weight: bold;
@@ -77,13 +86,7 @@ h4 {
 	line-height: 30px;
 }
 
-.lead {
-	font-family: 'Karla', sans-serif;
-	font-weight: bold;
-	font-size: 100px;
-	line-height: 40px;
-	color: #FFF;
-}
+
 
 .description {
 	font-family: 'Karla', sans-serif;
@@ -96,4 +99,8 @@ h4 {
 ul {
 	list-style-type: none;
 	padding:0;
+}
+
+li {
+	cursor: pointer;
 }

@@ -39,6 +39,7 @@
 	<a href="#main-navigation">Menu</a>
 	<button id="previous">Previous</button>
 	<button id="next">Next</button>
+	<h1 id="cloudname">Cloud Name</h1>
 	<div id="cloudbg"></div>
 </div>
 
@@ -53,6 +54,7 @@ $.getJSON('/clouds.json', function (data) {
 	for (i in clouds) {
 		$('#cloudthumbs').append("<li data-index=" + i + "><img class='navcloud' src='/assets/"+ clouds[i].name + "-thumb.png'></li>");
 	}
+	$("#cloudthumbs li").click(goToCloud);
 });
 	
 function loadCloud(index) {
@@ -60,7 +62,9 @@ function loadCloud(index) {
 	cloudbg.fadeOut('slow', function() {
 		cloudbg.css("background-image","url(/assets/" + clouds[index].name + ".png)");
 		cloudbg.fadeIn('slow');
+		$('#cloudname').html(clouds[index].genus + " " + clouds[index].specie);
 	});
+	
 }
 	
 function goPrevious() {
@@ -82,11 +86,12 @@ function goNext() {
 }
 
 function goToCloud() {
-	console.log($(this));
+	menuItem = $(this);
+	index = menuItem.data("index");
+	loadCloud(index);
 }
 
 $("#previous").click(goPrevious);	
 $("#next").click(goNext);
-$("#cloudthumbs li").click(goToCloud);
 
 </script>
